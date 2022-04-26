@@ -1,0 +1,8 @@
+<scroll-view class="search-list" scroll-y="true" scroll-x="false" refresher-enabled="{{true}}" bindrefresherrefresh="onScrollRefresh" refresher-triggered="{{refreshing}}">
+  <view class="search-item" wx:for="{{searchList}}" wx:key="id" data-song="{{item}}" bindtap="goToSongDetail">
+    <text class="title">{{item.name}}</text>
+    <text class="author">{{item.artists[0].name}}</text>
+    <text class="tag">{{item.alias[0]}}</text>
+  </view>
+  <NoData wx:if="{{!searchList.length}}"></NoData>
+</scroll-view>

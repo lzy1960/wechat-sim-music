@@ -1,0 +1,13 @@
+<view class="personal">
+  <view class="card user-info">
+    <image class="avatar" src="{{userInfo.avatarUrl||'/static/images/personal/avatar.png'}}" bindtap="toLogin"></image>
+    <view class="name">
+      <text>{{userInfo.nickname||'游客'}}</text>
+    </view>
+    <view class="info">
+      <text>{{userInfo.follows||0}}关注</text>
+      <text>{{userInfo.followeds||0}}粉丝</text>
+    </view>
+  </view>
+  <button class="logout" type="warn" bindtap="logout">退出登录</button>
+</view>

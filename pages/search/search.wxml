@@ -1,0 +1,42 @@
+<view class="search-container">
+  <view class="header">
+    <text class="iconfont icon-search search-icon"></text>
+    <input type="text" value="{{searchContent}}" placeholder="{{placeholder}}" confirm-type="search" focus="true" bindinput="handleInputChange" bindconfirm="setKeywords" data-keywords="{{searchContent}}" />
+    <text hidden="{{!searchContent}}" class="iconfont icon-closefill cancel-icon" bindtap="handleClearInput"></text>
+  </view>
+
+  <!-- 搜索建议展示区 -->
+  <block wx:if="{{suggestList.length}}">
+    <view class="search-content">
+      <view class="search-list">
+        <view class="search-item" wx:for="{{suggestList}}" wx:key="id">
+          <text class="iconfont icon-search search-icon"></text>
+          <text class="name">{{item.keyword}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <!-- 热搜榜 -->
+  <block wx:else>
+    <view class="hot-container">
+      <!-- 历史记录 -->
+      <view class="history" wx:if="{{historyList.length}}">
+        <view class="history-title">历史</view>
+        <scroll-view class="history-list" scroll-x="true" scroll-y="false" enable-flex="true">
+          <view class="history-item" wx:for="{{historyList}}" wx:key="item" data-keywords="{{item}}" bindtap="setKeywords">{{item}}</view>
+        </scroll-view>
+        <text class="iconfont icon-delete" bindtap="handleClearHistoryList"></text>
+      </view>
+      <!-- 热搜榜 -->
+      <view class="hot-title">热搜榜</view>
+      <view class="hot-list">
+        <view class="hot-item" wx:for="{{hotList}}" wx:key="searchWord" data-keywords="{{item.searchWord}}" bindtap="setKeywords">
+          <text class="order">{{index+1}}</text>
+          <text>{{item.searchWord}}</text>
+          <image class="icon-image" wx:if="{{item.iconUrl}}" src="{{item.iconUrl}}" mode="heightFix"></image>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

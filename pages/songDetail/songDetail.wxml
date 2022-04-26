@@ -1,0 +1,20 @@
+<view class="song-detail-container">
+  <view class="author">{{song.ar[0].name}}</view>
+  <image class="cover {{isPlay && 'coverAnimation'}}" src="{{song.al.picUrl}}"></image>
+
+  <!-- 进度条控制区域 -->
+  <view class="progress-control">
+    <text>{{curTime}}</text>
+    <slider class="bar-control" value="{{progress}}" bindchange="handleChangeTime"></slider>
+    <text>{{durationTime}}</text>
+  </view>
+
+  <!-- 底部控制播放区域 -->
+  <view class="music-controller">
+    <text class="iconfont icon-xunhuanbofang"></text>
+    <text class="iconfont icon-24gf-previous" bindtap="handleSwitch" id="prev"></text>
+    <text class="iconfont {{isPlay?'icon-Pause':'icon-play'}} big" bindtap="handleMusicPlay"></text>
+    <text class="iconfont icon-24gf-next" bindtap="handleSwitch" id="next"></text>
+    <text class="iconfont icon-24gf-playlist4"></text>
+  </view>
+</view>

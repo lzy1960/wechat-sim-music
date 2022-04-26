@@ -1,19 +1,143 @@
-/**index.wxss**/
-.userinfo {
+.fake-searchbar {
+  height: 60rpx;
+  width: 100%;
+  z-index: 10;
+}
+
+.fake-searchbar .searchbar-container {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+}
+
+.fake-searchbar .searchbar-container .search-icon {
+  padding-right: 10rpx;
+  color: #878a8a;
+}
+
+.fake-searchbar .searchbar-container .content {
+  font-size: 28rpx;
+  width: 100%;
+  flex: 1;
+}
+
+/* 轮播图 */
+.banner {
+  width: 100%;
+  height: 300rpx;
+}
+
+.banner .banner-item {
+  background-color: #ccc;
+}
+
+.banner .banner-item image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 导航区 */
+.nav-container {
+  display: flex;
+}
+
+.nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #aaa;
+  width: 20%;
 }
 
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+.nav-item .iconfont {
+  width: 100rpx;
+  height: 100rpx;
   border-radius: 50%;
+  text-align: center;
+  line-height: 100rpx;
+  background-color: #5bc29a;
+  color: #fff;
+  margin-top: 20rpx;
+  font-size: 50rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.nav-item text {
+  font-size: 26rpx;
+}
+
+/* 推荐歌曲 */
+.recommend-container {
+  padding: 20rpx;
+}
+
+/* 推荐内容区 */
+.recommend-scroll {
+  display: flex;
+}
+
+.scroll-item {
+  width: 200rpx;
+  margin-right: 20rpx;
+}
+
+.scroll-item image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  background-color: #ccc;
+}
+
+.scroll-item text {
+  /* 单行文本溢出 */
+  /* font-size: 26rpx;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+
+  /* 多行文本溢出 */
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.top-list .top-list-swiper {
+  font-size: 30rpx;
+  line-height: 80rpx;
+  height: 450rpx;
+}
+
+.top-list .top-list-item image {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #ccc;
+  border-radius: 6rpx;
+}
+
+.top-list .top-list-item .music-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.top-list .top-list-item image {
+  margin-right: 30rpx;
+}
+
+.top-list .top-list-item .count {
+  margin-right: 30rpx;
+}
+
+.top-list .top-list-item .music-name {
+  margin-right: 30rpx;
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

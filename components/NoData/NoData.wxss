@@ -1,0 +1,6 @@
+.container {
+  text-align: center;
+  color: #ccc;
+  height: 100rpx;
+  line-height: 100rpx;
+}

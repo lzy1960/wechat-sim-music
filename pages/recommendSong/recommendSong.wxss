@@ -1,0 +1,65 @@
+.recommendSongContainer .header {
+  width: 100%;
+  height: 400rpx;
+}
+
+.recommendSongContainer .header image {
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+}
+
+.list-container {
+  position: relative;
+  top: -30rpx;
+  padding: 0 20rpx;
+  border-radius: 30rpx;
+  background-color: #fff;
+}
+
+.list-container .list-header {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.list-container .list-header select-more {
+  float: right;
+}
+
+.list-container .list-scroll {
+  height: calc(100vh - 480rpx);
+}
+
+.list-container .list-scroll .scroll-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.list-container .list-scroll .scroll-item image {
+  width: 100rpx;
+  flex: 0 0 100rpx;
+  height: 100rpx;
+  background-color: #ccc;
+  border-radius: 10rpx;
+}
+
+.list-container .list-scroll .scroll-item .music-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  width: 500rpx;
+}
+
+.list-container .list-scroll .scroll-item .music-info text {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  height: 40rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-container .list-scroll .scroll-item .music-info .author {
+  color: #aaa;
+}

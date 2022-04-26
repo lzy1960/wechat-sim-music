@@ -1,0 +1,54 @@
+.personal .card {
+  margin: 0 30rpx;
+  border-radius: 30rpx;
+}
+
+.personal .user-info {
+  background-color: #5bc29a;
+  position: relative;
+  text-align: center;
+  margin-top: 100rpx;
+}
+
+.personal .user-info {
+  padding-top: 80rpx;
+  padding-bottom: 20rpx;
+}
+
+.personal .user-info .avatar {
+  position: absolute;
+  transform: translateX(-50%);
+  top: -80rpx;
+  background-color: #ccc;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.personal .user-info .name {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.personal .user-info .info {
+  justify-content: space-evenly;
+  font-size: 24rpx;
+  margin: 10rpx 0;
+}
+
+.personal .user-info .info text {
+  margin: 10rpx 0;
+  margin-right: 40rpx;
+}
+
+.personal .user-info .info text:last-child {
+  margin-right: 0;
+}
+
+.personal .user-info .tag {
+  font-size: 36rpx;
+}
+
+.logout {
+  margin-top: 50rpx;
+}

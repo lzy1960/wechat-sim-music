@@ -1,0 +1,33 @@
+.search-list {
+  padding: 20rpx;
+  height: 100%;
+  height: 100%;
+}
+
+.search-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ccc;
+  padding: 20rpx 0;
+}
+
+.search-item .title {
+  font-weight: bold;
+}
+
+.search-item .author {
+  font-size: 24rpx;
+  color: #aaa;
+  margin: 10rpx 0;
+}
+
+.search-item .tag {
+  font-size: 24rpx;
+  color: #aaa;
+}
+
+.data-loading {
+  text-align: center;
+  font-size: 28rpx;
+  color: #aaa;
+}

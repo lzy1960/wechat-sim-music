@@ -1,0 +1,66 @@
+.song-detail-container {
+  height: 100%;
+  background-color: #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.song-detail-container .author {
+  margin: 50rpx 0;
+  color: #fff;
+}
+
+.song-detail-container .cover {
+  width: 600rpx;
+  height: 600rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 20rpx 10rpx rgba(0, 0, 0, 0.2);
+}
+
+.song-detail-container .coverAnimation {
+  animation: cover 15s linear infinite;
+}
+
+@keyframes cover {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.song-detail-container .music-controller {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 40rpx;
+  left: 0;
+}
+
+.song-detail-container .music-controller text {
+  text-align: center;
+  font-size: 40rpx;
+  color: #fff;
+}
+
+.song-detail-container .music-controller text.big {
+  font-size: 80rpx;
+}
+
+.song-detail-container .progress-control {
+  position: absolute;
+  bottom: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+
+.song-detail-container .progress-control .bar-control {
+  width: 400rpx;
+}
